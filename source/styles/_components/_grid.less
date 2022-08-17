@@ -1,0 +1,39 @@
+.grid {
+	display: grid;
+	grid-template-columns: repeat(12, 1fr);
+	align-content: start;
+
+	&--gapped {
+		gap: 1.5rem;
+	}
+}
+
+.grid__col-mixin(@i) when (@i <= 12) {
+	grid-column-end: span 12;
+
+	&--mob-@{i} {
+		grid-column-end: span @i;
+	}
+
+	@media @tablet-desktop {
+		&--tab-@{i} {
+			grid-column-end: span @i;
+		}
+	}
+
+	@media @desktop {
+		&--start-@{i} {
+			grid-column-start: @i;
+		}
+
+		&--@{i} {
+			grid-column-end: span @i;
+		}
+	}
+
+	.grid__col-mixin(@i + 1);
+}
+
+.grid__col {
+	.grid__col-mixin(1);
+}

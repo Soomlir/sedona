@@ -3,10 +3,17 @@ root = true
 [*]
 charset = utf-8
 end_of_line = lf
-indent_size = 2
-indent_style = space
+indent_size = tab
+indent_style = tab
 insert_final_newline = true
 trim_trailing_whitespace = true
 
-[*.md]
-trim_trailing_whitespace = false
+[*.svg]
+insert_final_newline = false
+
+[*.json]
+insert_final_newline = false
+
+[*.yml]
+indent_size = 2
+indent_style = space

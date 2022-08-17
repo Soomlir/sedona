@@ -1,0 +1,23 @@
+name: Project check
+on:
+  pull_request:
+    branches:
+      - '*'
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Set up Node.js
+        uses: actions/setup-node@v1
+        with:
+          node-version: "16"
+      - name: Checkout
+        uses: actions/checkout@master
+        with:
+          ref: main
+      - name: Install dependencies
+        run: |
+          npm ci
+      - name: Run lint
+        run: |
+          npm run lint
