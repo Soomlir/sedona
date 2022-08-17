@@ -1,0 +1,40 @@
+{
+  "extends": "stylelint-config-htmlacademy",
+  "plugins": [
+        "stylelint-order"
+    ],
+  "rules": {
+    "declaration-no-important": true,
+    "indentation": [2, {"ignore": ["inside-parens"]}],
+    "at-rule-no-unknown": null,
+    "order/properties-order": [
+      "content",
+      "position",
+      "top",
+      "right",
+      "bottom",
+      "left",
+      "z-index",
+      "box-sizing",
+      "display",
+      "float",
+      "width",
+      "height",
+      "margin",
+      "padding",
+      "font-family",
+      "font-style",
+      "font-size",
+      "line-height",
+      "font-weight",
+      "text-align",
+      "color",
+      "text-decoration",
+      "text-transform",
+      "background-color",
+      "border",
+      "border-radius",
+      "opacity"
+    ]
+  }
+}

@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html class="page" lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/style.min.css">
+</head>
+<body class="page__body">
+  <header class="page-header container">
+    <div class="page-header__logo">
+      <img src="../img/content/logo.svg" width="139" height="70" alt="Логотип сайта Sedona">
+    </div>
+    <nav class="page-header__nav main-nav">
+      <ul class="nav-list">
+        <li class="nav-list__item">
+          <a class="nav-list__link" href="/">Главная</a>
+        </li>
+        <li class="nav-list__item">
+          <a class="nav-list__link" href="#">О Седоне</a>
+        </li>
+        <li class="nav-list__item">
+          <a class="nav-list__link">Гостиницы</a>
+        </li>
+      </ul>
+
+      <a class="link-search" href="#"></a>
+      <a class="link-favorites" href="#"></a>
+      <a class="link-wish" href="#"></a>
+    </nav>
+  </header>
+
+  <main class="main-catalog">
+    <h1 class="main-catalog__heading">Гостиницы Седоны</h1>
+    <div class="bread-crumbs">
+      <ul>
+        <li></li>
+        <li>Гостиницы</li>
+      </ul>
+    </div>
+    <form class="main-catalog__form" method="POST" action="echo.htmlacademy.ru">
+      <fieldset>
+        <legend>Инфраструктура:</legend>
+        <label>
+          <input type="checkbox" name="pool"> Бассейн
+        </label>
+        <label>
+          <input type="checkbox" name="parking"> Парковка
+        </label>
+        <label>
+          <input type="checkbox" name="wifi"> Wi-Fi
+        </label>
+      </fieldset>
+
+      <fieldset>
+        <legend>Тип Жилья:</legend>
+        <input type="radio" name="housing"> Гостиница
+        <input type="radio" name="housing"> Мотель
+        <input type="radio" name="housing"> Апартаменты
+      </fieldset>
+
+      <div class="price">
+
+      </div>
+
+      <button type="submit">Применить</button>
+      <button type="reset">Сбросить</button>
+    </form>
+
+    <section class="main-catalog__info">
+      <p class="main-catalog__lead">Найдено гостиниц: 38</p>
+      <select>
+        <option>Сначало дешевые</option>
+      </select>
+
+
+    </section>
+
+    <section class="main-catalog__results">
+      <ul class="result-list">
+        <li class="result-list__item">
+          <img src="../img/content/hotel-1.jpg" width="300" height="211" alt="Гостиница Amara Resort & Spa">
+          <h2 class="result-list__heading">Amara Resort & Spa</h2>
+          <span class="result-list__about">Гостиница</span>
+          <span class="result-list__price">От 4000 ₽</span>
+          <a class="result-list__more" href="#">Подробнее</a>
+          <a class="result-list__favourite" href="#">В избранное</a>
+          <span class="result-list__stars"></span>
+          <span class="result-list__rating">Рейтинг: 8,5</span>
+        </li>
+
+        <li class="result-list__item">
+          <img src="../img/content/hotel-2.jpg" width="300" height="211" alt="Гостиница Villas at Poco Diablo">
+          <h2 class="result-list__heading">Villas at Poco Diablo</h2>
+          <span class="result-list__about">Гостиница</span>
+          <span class="result-list__price">От 5000 ₽</span>
+          <a class="result-list__more" href="#">Подробнее</a>
+          <a class="result-list__favourite" href="#">В избранном</a>
+          <span class="result-list__stars"></span>
+          <span class="result-list__rating">Рейтинг: 9,2</span>
+        </li>
+
+        <li class="result-list__item">
+          <img src="../img/content/hotel-3.jpg" width="300" height="211"  alt="Гостиница Desert Quail Inn">
+          <h2 class="result-list__heading">Desert Quail Inn</h2>
+          <span class="result-list__about">Гостиница</span>
+          <span class="result-list__price">От 2500 ₽</span>
+          <a class="result-list__more" href="#">Подробнее</a>
+          <a class="result-list__favourite" href="#">В избранное</a>
+          <span class="result-list__stars"></span>
+          <span class="result-list__rating">Рейтинг: 6,9</span>
+        </li>
+
+        <li class="result-list__item">
+          <img src="../img/content/hotel-4.jpg" width="300" height="211"  alt="Гостиница GreenTree Inn">
+          <h2 class="result-list__heading">GreenTree Inn</h2>
+          <span class="result-list__about">Гостиница</span>
+          <span class="result-list__price">От 1500 ₽</span>
+          <a class="result-list__more" href="#">Подробнее</a>
+          <a class="result-list__favourite" href="#">В избранное</a>
+          <span class="result-list__stars"></span>
+          <span class="result-list__rating">Рейтинг: 5,0</span>
+        </li>
+      </ul>
+    </section>
+
+    <section class="main-catalog__pagination">
+      <ul class="pagination-list">
+        <li class="pagination-list__item">
+          <a class="pagination-list__link" href="#">1</a>
+        </li>
+        <li class="pagination-list__item">
+          <a class="pagination-list__link" href="#">2</a>
+        </li>
+        <li class="pagination-list__item">
+          <a class="pagination-list__link" href="#">3</a>
+        </li>
+        <li class="pagination-list__item">
+          <a class="pagination-list__link" href="#">4</a>
+        </li>
+        <li class="pagination-list__item">
+          <a class="pagination-list__link" href="#">...</a>
+        </li>
+        <li class="pagination-list__item">
+          <a class="pagination-list__link" href="#">10</a>
+        </li>
+      </ul>
+
+      <div class="pagination-choise">
+        <p class="pagination-choise__text">Гостиниц на странице:</p>
+        <select>
+          <option>4</option>
+        </select>
+      </div>
+    </section>
+  </main>
+
+  <footer class="page-footer">
+    <div class="page-footer__mailing">
+      <b>Подпишитесь на рассылку</b>
+      <p>Только полезная информация и никакого спама, честное бойскаутское!</p>
+      <form class="page-footer__form">
+        <input type="text" placeholder="Ваш e-mail">
+        <button>Подписаться</button>
+      </form>
+    </div>
+
+    <ul class="page-footer__social-list">
+      <li class="page-footer__social-item">
+        <a class="page-footer__social-link" href="#">Vk</a>
+      </li>
+      <li class="page-footer__social-item">
+        <a class="page-footer__social-link" href="#">Telegram</a>
+      </li>
+      <li class="page-footer__social-item">
+        <a class="page-footer__social-link" href="#">Youtube</a>
+      </li>
+    </ul>
+
+    <a class="page-footer__phone" href="tel:+78128121212">+7 (812) 812-12-12</a>
+    <a class="page-footer__copyright" href="#">
+      <img src="#">
+    </a>
+  </footer>
+</body>
+</html>
