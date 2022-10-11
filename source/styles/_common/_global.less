@@ -1,114 +1,40 @@
-html {
-	--color-white: #ffffff;
-	min-width: 320px;
-	overflow-x: hidden;
-	overflow-anchor: none;
-	scroll-behavior: smooth;
-	font-size: 16px;
-	line-height: 1.2;
-	font-family: 'Arial', sans-serif;
-	-webkit-font-smoothing: antialiased;
-	-moz-osx-font-smoothing: grayscale;
-	-webkit-tap-highlight-color: transparent;
-}
-
 body {
+	min-width: 1200px;
 	margin: 0;
-}
-
-a,
-button,
-input,
-select,
-textarea {
-	font: inherit;
-	color: inherit;
-	transition-property: color, opacity, background-color, border-color, box-shadow;
-	transition-duration: 0.2s;
-	transition-timing-function: ease-in-out;
-
-	&:disabled {
-		opacity: 0.5;
-		cursor: not-allowed;
-	}
-}
-
-a,
-button {
-	&:hover {
-		opacity: 0.6;
-	}
-
-	&:active {
-		opacity: 0.3;
-	}
-}
-
-a {
-	text-decoration-skip-ink: none;
-}
-
-input,
-textarea {
-	box-sizing: border-box;
-	-webkit-text-fill-color: currentColor;
-	box-shadow: none;
-
-	&:disabled {
-		opacity: 0.3;
-	}
-
-	&::placeholder {
-		color: inherit;
-		opacity: 0.3;
-	}
-}
-
-input {
-	&[type='number'] {
-		appearance: textfield;
-
-		&::-webkit-outer-spin-button,
-		&::-webkit-inner-spin-button {
-			appearance: none;
-		}
-	}
-
-	&::-webkit-search-decoration,
-	&::-webkit-search-cancel-button,
-	&::-webkit-search-results-button,
-	&::-webkit-search-results-decoration {
-		display: none;
-	}
-
-	&:-webkit-autofill {
-		box-shadow: none;
-	}
+	padding: 0;
+	font-weight: 400;
+	font-size: 22px;
+	line-height: 26px;
+	font-family: 'PT Sans', 'Arial', sans-serif;
 }
 
 img {
+	display: block;
 	max-width: 100%;
 	height: auto;
 }
 
-svg {
-	fill: currentColor;
+a {
+	color: inherit;
 }
 
-:focus {
-	outline: 2px solid;
-	outline-offset: 2px;
-
-	@supports selector(:focus-visible) {
-		outline: none;
-	}
+.container {
+	width: 1200px;
+	margin-right: auto;
+	margin-left: auto;
+	padding: 0 40px;
 }
 
-:focus-visible {
-	outline: 2px solid;
-	outline-offset: 2px;
+.visually-hidden {
+	position: fixed;
+	transform: scale(0);
+}
 
-	&:active {
-		outline: none;
-	}
+.button {
+	display: block;
+	padding: 10px 30px;
+	text-transform: uppercase;
+	color: #ffffff;
+	background: #756157;
+	border-radius: 4px;
 }
