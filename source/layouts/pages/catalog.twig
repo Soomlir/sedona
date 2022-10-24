@@ -1,0 +1,128 @@
+{% extends '../common/layout.twig' %}
+
+{% set isCatalog = true %}
+
+{% block main %}
+	<main class="main-catalog">
+		<h1 class="main-catalog__heading">Гостиницы Седоны</h1>
+		<ul class="bread-crumbs">
+			<li></li>
+			<li>
+				<a class="bread-crumbs__link">Гостиницы</a>
+			</li>
+		</ul>
+		<form class="main-catalog__form" method="post" action="echo.htmlacademy.ru">
+			<fieldset>
+				<legend class="main-catalog__legend">Инфраструктура:</legend>
+				<label>
+					<input name="pool" type="checkbox">
+					Бассейн
+				</label>
+				<label>
+					<input name="parking" type="checkbox">
+					Парковка
+				</label>
+				<label>
+					<input name="wifi" type="checkbox">
+					Wi-Fi
+				</label>
+			</fieldset>
+
+			<fieldset>
+				<legend class="main-catalog__legend">Тип Жилья:</legend>
+				<input name="housing" type="radio">
+				Гостиница
+				<input name="housing" type="radio">
+				Мотель
+				<input name="housing" type="radio">
+				Апартаменты
+			</fieldset>
+
+			<div class="price"></div>
+
+			<button type="submit">Применить</button>
+			<button type="reset">Сбросить</button>
+		</form>
+
+		<section class="main-catalog__info">
+			<h2 class="main-catalog__lead">Найдено гостиниц: 38</h2>
+			<select>
+				<option>Сначало дешевые</option>
+			</select>
+
+			<ul class="result-list">
+				<li class="result-list__item">
+					<img src="images/hotel-1.webp" alt="Гостиница Amara Resort &amp; Spa" width="300" height="211">
+					<h3 class="result-list__heading">Amara Resort &amp; Spa</h3>
+					<span class="result-list__about">Гостиница</span>
+					<span class="result-list__price">От 4000 ₽</span>
+					<a class="result-list__more" href="#">Подробнее</a>
+					<a class="result-list__favourite" href="#">В избранное</a>
+					<span class="result-list__stars"></span>
+					<span class="result-list__rating">Рейтинг: 8,5</span>
+				</li>
+
+				<li class="result-list__item">
+					<img src="images/hotel-2.webp" alt="Гостиница Villas at Poco Diablo" width="300" height="211">
+					<h3 class="result-list__heading">Villas at Poco Diablo</h3>
+					<span class="result-list__about">Гостиница</span>
+					<span class="result-list__price">От 5000 ₽</span>
+					<a class="result-list__more" href="#">Подробнее</a>
+					<a class="result-list__favourite" href="#">В избранном</a>
+					<span class="result-list__stars"></span>
+					<span class="result-list__rating">Рейтинг: 9,2</span>
+				</li>
+
+				<li class="result-list__item">
+					<img src="images/hotel-3.webp" alt="Гостиница Desert Quail Inn" width="300" height="211">
+					<h3 class="result-list__heading">Desert Quail Inn</h3>
+					<span class="result-list__about">Гостиница</span>
+					<span class="result-list__price">От 2500 ₽</span>
+					<a class="result-list__more" href="#">Подробнее</a>
+					<a class="result-list__favourite" href="#">В избранное</a>
+					<span class="result-list__stars"></span>
+					<span class="result-list__rating">Рейтинг: 6,9</span>
+				</li>
+
+				<li class="result-list__item">
+					<img src="images/hotel-4.webp" alt="Гостиница GreenTree Inn" width="300" height="211">
+					<h3 class="result-list__heading">GreenTree Inn</h3>
+					<span class="result-list__about">Гостиница</span>
+					<span class="result-list__price">От 1500 ₽</span>
+					<a class="result-list__more" href="#">Подробнее</a>
+					<a class="result-list__favourite" href="#">В избранное</a>
+					<span class="result-list__stars"></span>
+					<span class="result-list__rating">Рейтинг: 5,0</span>
+				</li>
+			</ul>
+
+			<ul class="pagination-list">
+				<li class="pagination-list__item">
+					<a class="pagination-list__link" href="#">1</a>
+				</li>
+				<li class="pagination-list__item">
+					<a class="pagination-list__link" href="#">2</a>
+				</li>
+				<li class="pagination-list__item">
+					<a class="pagination-list__link" href="#">3</a>
+				</li>
+				<li class="pagination-list__item">
+					<a class="pagination-list__link" href="#">4</a>
+				</li>
+				<li class="pagination-list__item">
+					<a class="pagination-list__link" href="#">...</a>
+				</li>
+				<li class="pagination-list__item">
+					<a class="pagination-list__link" href="#">10</a>
+				</li>
+			</ul>
+
+			<div class="pagination-choise">
+				<p class="pagination-choise__text">Гостиниц на странице:</p>
+				<select>
+					<option>4</option>
+				</select>
+			</div>
+		</section>
+	</main>
+{% endblock %}

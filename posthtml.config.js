@@ -1,26 +1,22 @@
-const getSourceName = (filename) => filename.replace(/^.*pages(\\+|\/+)(.*)$/, '$2').replace(/\\/g, '/');
-const exit = process.env.NODE_ENV !== 'development';
+const { getPosthtmlW3c } = require('pineglade-w3c');
+const minifyHtml = require('htmlnano');
 
-module.exports = () => {
-	const plugins = [
-		require('pineglade-w3c').getPosthtmlW3c({
-			exit,
-			forceOffline: true,
-			getSourceName
-		}),
-		require('pineglade-config').getPosthtmlBemLinter({
-			exit,
-			getSourceName
-		})
-	];
+const devMode = process.env.NODE_ENV !== 'development';
+const plugins = [
+	getPosthtmlW3c({
+		exit: !devMode,
+		forceOffline: true,
+		getSourceName(filename) {
+			return filename
+				.replace(/^.*pages(\\+|\/+)(.*)\.twig$/, '$2')
+				.replace(/\\/g, '/');
+		}
+	})
+];
 
-	if (process.env.NODE_ENV === 'production') {
-		const minify = require('htmlnano')({
-			collapseWhitespace: 'aggressive',
-			minifySvg: false
-		});
-		plugins.push(minify);
-	}
+// Изменение настроек в production-режиме
+if (devMode) {
+	plugins.push(minifyHtml({ collapseWhitespace: 'aggressive' }));
+}
 
-	return { plugins };
-};
+module.exports = { plugins };

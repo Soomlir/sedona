@@ -8,12 +8,9 @@ indent_style = tab
 insert_final_newline = true
 trim_trailing_whitespace = true
 
-[*.svg]
+[*.{json,svg}]
 insert_final_newline = false
 
-[*.json]
-insert_final_newline = false
-
-[*.yml]
+[*.{md,yml}]
 indent_size = 2
 indent_style = space
