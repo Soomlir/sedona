@@ -11,7 +11,7 @@ import minifyCss from 'cssnano';
 import minifySvg from 'gulp-svgmin';
 import preprocessLess from 'gulp-less';
 import processHtml from 'gulp-posthtml';
-import processImages from 'gulp-libsquoosh';
+import processImages from 'gulp-webp';
 import processPostcss from 'gulp-postcss';
 import processStylelint from 'stylelint';
 import reportStylelint from 'postcss-reporter';
@@ -126,7 +126,7 @@ const buildScripts = () =>
 
 const buildWebp = () =>
 	src(Path.Images.RASTERS)
-		.pipe(processImages({ webp: { quality: 75 } }))
+		.pipe(processImages( { quality: 75 } ))
 		.pipe(dest(Path.Images.DEST));
 
 const buildSvg = () => src(Path.Images.VECTORS).pipe(dest(Path.Images.DEST));
