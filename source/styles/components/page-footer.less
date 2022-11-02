@@ -1,3 +1,11 @@
+.page-footer__mailing {
+	padding-top: 94px;
+	text-align: center;
+	color: #ffffff;
+	background-image: url('../images/bg-form.webp');
+	background-repeat: no-repeat;
+}
+
 .page-footer__lead {
 	font-weight: 700;
 	font-size: 30px;
@@ -6,7 +14,54 @@
 }
 
 .page-footer__text {
+	margin: 0;
+	margin-top: 29px;
+	margin-bottom: 44px;
 	text-align: center;
+}
+
+.page-footer__form {
+	display: flex;
+	width: 800px;
+	margin-right: auto;
+	margin-left: auto;
+	padding-bottom: 94px;
+	text-align-last: left;
+}
+
+.page-footer__input {
+	display: block;
+	width: 177px;
+	padding: 18px 400px 18px 21px;
+	font-size: 18px;
+	line-height: 21px;
+	color: #000000;
+	background: #f2f2f2;
+	border-radius: 10px 0 0 10px;
+}
+
+.page-footer__button {
+	display: block;
+	padding: 12px 33px;
+	font-weight: 700;
+	font-size: 20px;
+	line-height: 36px;
+	color: #ffffff;
+	background-color: #82b3d3;
+	border: 0;
+	border-radius: 0 10px 10px 0;
+}
+
+.contacts-inner {
+	display: flex;
+	align-items: center;
+	padding-top: 25px;
+	padding-bottom: 25px;
+	padding-left: 29px;
+}
+
+.page-footer__social-list {
+	display: flex;
 }
 
 .page-footer__social-item {
@@ -14,13 +69,46 @@
 }
 
 .page-footer__social-link {
+	position: relative;
+	display: flex;
 	text-decoration: none;
+	background-color: #ffffff;
+	border-radius: 10px;
+}
+
+.page-footer__social-link::before {
+	content: '';
+	top: 0;
+	left: 0;
+	display: flex;
+	width: 48px;
+	height: 40px;
+	margin: auto;
+}
+
+.page-footer__social-link--vk::before {
+	background-image: url('../images/icons.svg#social-vk');
+	background-repeat: no-repeat;
+}
+
+.page-footer__social-link--telegram::before {
+	background-image: url('../images/icons.svg#social-telegram');
+}
+
+.page-footer__social-link--youtube::before {
+	background-image: url('../images/icons.svg#social-youtube');
 }
 
 .page-footer__phone {
+	margin-left: 234px;
+	font-size: 40px;
+	line-height: 40px;
+	text-transform: uppercase;
 	text-decoration: none;
+	text-align: center;
 }
 
 .page-footer__copyright {
+	margin-left: 236px;
 	text-decoration: none;
 }

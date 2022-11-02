@@ -3,7 +3,7 @@ import { checkModPressed } from './common/utils.js';
 import loadPP from 'pineglade-pp';
 
 window.pinegladePP = {
-	breakpoints: [Breakpoint.MOBILE, Breakpoint.DESKTOP],
+	breakpoints: [Breakpoint.DESKTOP],
 	ext: 'webp',
 	folder: 'images'
 };

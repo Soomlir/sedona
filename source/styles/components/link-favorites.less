@@ -3,15 +3,22 @@
 	display: block;
 	width: 20px;
 	height: 20px;
+	margin-right: 31px;
+	background-image: url('../images/icons.svg#favorite');
+	background-repeat: no-repeat;
+}
 
-	&::before {
-		content: '';
-		position: absolute;
-		top: 0;
-		left: 0;
-		width: 19px;
-		height: 17px;
-		background-image: url('../images/sprite.min.svg#favorite');
-		background-repeat: no-repeat;
-	}
+.link-favorites__count {
+	position: absolute;
+	top: -8px;
+	left: 13px;
+	z-index: 2;
+	min-width: 12px;
+	padding: 2px 4px 4px;
+	font-size: 10px;
+	line-height: 13px;
+	text-align: center;
+	color: #ffffff;
+	background-color: #7db54f;
+	border-radius: 10px;
 }
