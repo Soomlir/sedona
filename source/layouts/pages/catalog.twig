@@ -4,45 +4,63 @@
 
 {% block main %}
 	<main class="main-catalog">
-		<h1 class="main-catalog__heading">Гостиницы Седоны</h1>
-		<ul class="bread-crumbs">
-			<li></li>
-			<li>
-				<a class="bread-crumbs__link">Гостиницы</a>
-			</li>
-		</ul>
-		<form class="main-catalog__form" method="post" action="echo.htmlacademy.ru">
-			<fieldset>
-				<legend class="main-catalog__legend">Инфраструктура:</legend>
-				<label>
-					<input name="pool" type="checkbox">
-					Бассейн
-				</label>
-				<label>
-					<input name="parking" type="checkbox">
-					Парковка
-				</label>
-				<label>
-					<input name="wifi" type="checkbox">
-					Wi-Fi
-				</label>
-			</fieldset>
+		<div class="main-catalog__inner">
+			<h1 class="main-catalog__heading">Гостиницы Седоны</h1>
+			<ul class="bread-crumbs">
+				<li>
+					<a class="bread-crumbs__link bread-crumbs__link--icon-home" href="#">
+						<span class="visually-hidden">Вернуться в начало</span>
+					</a>
+				</li>
+				<li>
+					<a class="bread-crumbs__link">Гостиницы</a>
+				</li>
+			</ul>
+			<form class="main-catalog__form" method="post" action="echo.htmlacademy.ru">
+				<fieldset class="main-catalog__fieldset">
+					<legend class="main-catalog__legend">Инфраструктура:</legend>
+						<p class="main-catalog__wrap">
+							<input class="main-catalog__label-input" id="pool" name="pool" type="checkbox" checked>
+							<label class="main-catalog__label-checkbox" for="pool">Бассейн</label>
+						</p>
 
-			<fieldset>
-				<legend class="main-catalog__legend">Тип Жилья:</legend>
-				<input name="housing" type="radio">
-				Гостиница
-				<input name="housing" type="radio">
-				Мотель
-				<input name="housing" type="radio">
-				Апартаменты
-			</fieldset>
+						<p class="main-catalog__wrap">
+							<input class="main-catalog__label-input" id="parking" name="parking" type="checkbox" checked>
+							<label class="main-catalog__label-checkbox" for="parking">Парковка</label>
+						</p>
 
-			<div class="price"></div>
+						<p class="main-catalog__wrap">
+							<input class="main-catalog__label-input" id="wifi" name="wifi" type="checkbox">
+							<label class="main-catalog__label-checkbox" for="wifi">Wi-Fi</label>
+						</p>
+				</fieldset>
 
-			<button type="submit">Применить</button>
-			<button type="reset">Сбросить</button>
-		</form>
+				<fieldset class="main-catalog__fieldset">
+					<legend class="main-catalog__legend">Тип жилья:</legend>
+					<p class="main-catalog__wrap">
+						<input class="main-catalog__label-input" id="housing-hostel" name="housing" type="radio" checked>
+						<label class="main-catalog__label-radio" for="housing-hostel">Гостиница</label>
+					</p>
+					<p class="main-catalog__wrap">
+						<input class="main-catalog__label-input" id="housing-motel" name="housing" type="radio">
+						<label class="main-catalog__label-radio" for="housing-motel">Мотель</label>
+					</p>
+					<p class="main-catalog__wrap">
+						<input class="main-catalog__label-input" id="housing-appartment" name="housing" type="radio">
+						<label class="main-catalog__label-radio" for="housing-appartment">Апартаменты</label>
+					</p>
+				</fieldset>
+
+				<div class="price">
+					<p class="price__lead">Стоимость, ₽:</p>
+					<input class="price__input" type="text" name="start" placeholder="0">от
+					<input class="price__input" type="text" name="end" placeholder="9000">до
+				</div>
+
+				<button type="submit">Применить</button>
+				<button type="reset">Сбросить</button>
+			</form>
+		</div>
 
 		<section class="main-catalog__info">
 			<h2 class="main-catalog__lead">Найдено гостиниц: 38</h2>
