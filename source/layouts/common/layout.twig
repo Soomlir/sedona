@@ -5,6 +5,8 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<title>Sedona</title>
 		<link href="styles/main.css" rel="stylesheet">
+		<link href="//cdn.bootcss.com/noUiSlider/8.5.1/nouislider.min.css" rel="stylesheet">
+		<script src="//cdn.bootcss.com/noUiSlider/8.5.1/nouislider.js"></script>
 	</head>
 
 	<body>
@@ -16,13 +18,15 @@
 				<nav class="page-header__nav main-nav">
 					<ul class="nav-list">
 						<li class="nav-list__item">
-							<a class="nav-list__link nav-list__link--current" {{ not isMain ? 'href="index.html" ' }}>Главная</a>
+							<a class="nav-list__link {{ isMain ? 'nav-list__link--current' }}"
+								{{ not isMain ? 'href="index.html" ' }}>Главная</a>
 						</li>
 						<li class="nav-list__item">
 							<a class="nav-list__link" href="#!">О Седоне</a>
 						</li>
 						<li class="nav-list__item">
-							<a class="nav-list__link" {{ not isCatalog ? 'href="catalog.html" ' }}>Гостиницы</a>
+							<a class="nav-list__link {{ not isMain ? 'nav-list__link--current' }}"
+								{{ not isCatalog ? 'href="catalog.html" ' }}>Гостиницы</a>
 						</li>
 					</ul>
 
@@ -42,9 +46,9 @@
 			{% block main %}{% endblock %}
 
 			<footer class="page-footer page__footer">
-				<div class="page-footer__mailing">
+				<div class="page-footer__mailing {{ page == 'index' ? 'page-footer__mailing--alter' }}">
 					<b class="page-footer__lead">Подпишитесь на рассылку</b>
-					<p class="page-footer__text">Только полезная информация и никакого спама,<br> честное бойскаутское!</p>
+					<p class="page-footer__text {{ page == 'index' ? 'page-footer__text--alter' }}">Только полезная информация и никакого спама,<br> честное бойскаутское!</p>
 					<form class="page-footer__form" method="post">
 						<input class="page-footer__input" type="text" placeholder="Ваш e-mail">
 						<button class="page-footer__button button" type="submit">Подписаться</button>
@@ -73,7 +77,10 @@
 					<a class="page-footer__phone" href="tel:+78128121212">+7 (812) 812-12-12</a>
 					<a class="page-footer__copyright" href="#!">
 						<span class="visually-hidden">Разработано</span>
-						<img src="images/logo-htmlacademy.svg" alt="Логотип HTMLAcademy.">
+						{# <img src="images/logo-htmlacademy.svg" alt="Логотип HTMLAcademy."> #}
+						<svg class="page-footer__img" role="img" aria-label="HTML Academy." width="115" height="33" focusable="false">
+							<use xlink:href="images/logo-htmlacademy.svg#logo" />
+						</svg>
 					</a>
 				</div>
 			</footer>
@@ -83,5 +90,39 @@
 		{% if devMode %}
 			<script src="scripts/dev.js"></script>
 		{% endif %}
+
+
+		<script>
+		var range = document.querySelector('.range__label-area');
+		noUiSlider.create(range, {
+				start: [ 0, 9000 ], // Handle start position
+				step: 100, // Slider moves in increments of '10'
+				cssPrefix: 'range__',
+				margin: 20, // Handles must be more than '20' apart
+				connect: true, // Display a colored bar between the handles
+				direction: 'ltr', // Put '0' at the bottom of the slider
+				orientation: 'horizontal', // Orient the slider vertically
+				behaviour: 'tap-drag', // Move handle on tap, bar is draggable
+				range: { // Slider can select '0' to '100'
+						'min': 0,
+						'max': 11000
+				},
+		});
+		var valueInput = document.querySelector('.value-input'),
+						valueSpan = document.querySelector('.value-span');
+		// When the slider value changes, update the input and span
+		range.noUiSlider.on('update', function( values, handle ) {
+				if ( handle ) {
+						valueInput.value = values[handle];
+				} else {
+						valueSpan.innerHTML = values[handle];
+				}
+		});
+		// When the input changes, set the slider value
+		valueInput.addEventListener('change', function(){
+				range.noUiSlider.set([null, this.value]);
+		});
+</script>
+
 	</body>
 </html>

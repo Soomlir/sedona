@@ -15,7 +15,7 @@
 
 .feature-list__heading {
 	margin: 0;
-	margin-bottom: 30px;
+	margin-bottom: 28px;
 	padding-top: 101px;
 	font-weight: 700;
 	font-size: 24px;
@@ -26,28 +26,28 @@
 
 .feature-list__icon {
 	position: relative;
-}
 
-.feature-list__icon::before {
-	content: '';
-	position: absolute;
-	top: 0;
-	left: 82px;
-	display: block;
-	width: 75px;
-	height: 72px;
-}
+	&::before {
+		content: '';
+		position: absolute;
+		top: 0;
+		left: 82px;
+		display: block;
+		width: 75px;
+		height: 72px;
+	}
 
-.feature-list__icon--house::before {
-	background-image: url('../images/icons.svg#house');
-}
+	&--house::before {
+		background-image: url('../images/icons.svg#house');
+	}
 
-.feature-list__icon--burger::before {
-	background-image: url('../images/icons.svg#burger');
-}
+	&--burger::before {
+		background-image: url('../images/icons.svg#burger');
+	}
 
-.feature-list__icon--suprise::before {
-	background-image: url('../images/icons.svg#suprise');
+	&--suprise::before {
+		background-image: url('../images/icons.svg#suprise');
+	}
 }
 
 .feature-list__text {

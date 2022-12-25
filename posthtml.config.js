@@ -1,7 +1,7 @@
 const { getPosthtmlW3c } = require('pineglade-w3c');
-const minifyHtml = require('htmlnano');
+// const minifyHtml = require('htmlnano');
 
-const devMode = process.env.NODE_ENV !== 'development';
+const devMode = process.env.NODE_ENV === 'development';
 const plugins = [
 	getPosthtmlW3c({
 		exit: !devMode,
@@ -15,8 +15,8 @@ const plugins = [
 ];
 
 // Изменение настроек в production-режиме
-if (devMode) {
-	plugins.push(minifyHtml({ collapseWhitespace: 'aggressive' }));
-}
+// if (!devMode) {
+// plugins.push(minifyHtml({ collapseWhitespace: 'aggressive' }));
+// }
 
 module.exports = { plugins };

@@ -1,0 +1,158 @@
+.range {
+	display: flex;
+	flex-wrap: wrap;
+	align-items: flex-start;
+	box-sizing: border-box;
+	width: 291px;
+	margin-left: 81px;
+	padding: 0;
+}
+
+.range__label {
+	margin: 0;
+	padding: 8px 15px 10px;
+	border: 2px solid #ffffff;
+	border-radius: 4px;
+}
+
+.range__label--alter {
+	margin-left: 3px;
+	border-right: none;
+	border-top-right-radius: 0;
+	border-bottom-right-radius: 0;
+}
+
+.range__label--no-border {
+	border-top-left-radius: 0;
+	border-bottom-left-radius: 0;
+}
+
+.range__text  {
+	margin-left: auto;
+	opacity: 0.3;
+}
+
+.range__input {
+	width: 84px;
+	font: inherit;
+	color: inherit;
+	background: transparent;
+	border: none;
+	border-radius: 4px;
+	outline: none;
+	box-shadow: none;
+	appearance: textfield;
+}
+
+.button-inner {
+	display: flex;
+	flex-direction: column;
+	margin-top: 58px;
+	margin-left: 5px;
+}
+
+.button-form {
+	margin-bottom: 31px;
+	padding: 8px 50px;
+	font-weight: 700;
+	font-size: 16px;
+	line-height: 20px;
+	text-transform: uppercase;
+	color: #ffffff;
+	background-color: #82b3d3;
+	border: none;
+
+	&:hover,
+	&:focus {
+		background: #68a2ca;
+	}
+
+	&:active {
+		color: rgba(255, 255, 255, 0.3);
+		background: #82b3d3;
+	}
+
+	&:disabled {
+		color: #ffffff;
+		background: #e5e5e5;
+	}
+}
+
+.button-form--alter {
+	text-transform: uppercase;
+	background: transparent;
+}
+
+/* PRICE AREA */
+.range__label-area {
+	width: 289px;
+	height: 4px !important;
+	margin-left: 2px;
+}
+
+.range__target {
+	margin-top: 35px;
+	padding-right: 20px;
+}
+
+.range__base {
+	position: relative;
+	height: 20px;
+}
+
+.range__base::before {
+	content: '';
+	position: absolute;
+	top: 8px;
+	right: -20px;
+	bottom: 8px;
+	left: 0;
+	background-color: currentColor;
+	opacity: 0.3;
+}
+
+.range__connect,
+.range__origin {
+	position: absolute;
+	width: 100%;
+	transform-origin: 0 0;
+	transform-style: flat;
+}
+
+.range__connect {
+	top: 8px;
+	right: 0;
+	height: 4px;
+	background-color: currentColor;
+}
+
+.range__origin {
+	top: 0;
+	left: 100%;
+}
+
+.range__handle {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 20px;
+	height: 20px;
+	background-color: currentColor;
+	border-radius: 5px;
+	outline-offset: 0;
+	cursor: pointer;
+}
+
+.range__handle:hover {
+	box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25);
+}
+
+.range__handle:focus-visible {
+	outline: 3px solid #83b3d3;
+	box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25);
+}
+
+.range__handle:active {
+	outline: 2px solid #83b3d3;
+	box-shadow: 0 7px 15px rgba(0, 0, 0, 0.4);
+}
