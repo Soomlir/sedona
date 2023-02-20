@@ -5,8 +5,6 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<title>Sedona</title>
 		<link href="styles/main.css" rel="stylesheet">
-		<link href="//cdn.bootcss.com/noUiSlider/8.5.1/nouislider.min.css" rel="stylesheet">
-		<script src="//cdn.bootcss.com/noUiSlider/8.5.1/nouislider.js"></script>
 	</head>
 
 	<body>
@@ -57,20 +55,20 @@
 			<form class="main-catalog__form" method="post" action="echo.htmlacademy.ru">
 				<fieldset class="main-catalog__fieldset">
 					<legend class="main-catalog__legend">Инфраструктура:</legend>
-						<p class="main-catalog__wrap">
-							<input class="main-catalog__label-input visually-hidden" id="pool" name="pool" type="checkbox" checked="">
-							<label class="main-catalog__label-checkbox" for="pool">Бассейн</label>
-						</p>
+					<p class="main-catalog__wrap">
+						<input class="main-catalog__label-input visually-hidden" id="pool" name="pool" type="checkbox" checked="">
+						<label class="main-catalog__label-checkbox" for="pool">Бассейн</label>
+					</p>
 
-						<p class="main-catalog__wrap">
-							<input class="main-catalog__label-input visually-hidden" id="parking" name="parking" type="checkbox" checked="">
-							<label class="main-catalog__label-checkbox" for="parking">Парковка</label>
-						</p>
+					<p class="main-catalog__wrap">
+						<input class="main-catalog__label-input visually-hidden" id="parking" name="parking" type="checkbox" checked="">
+						<label class="main-catalog__label-checkbox" for="parking">Парковка</label>
+					</p>
 
-						<p class="main-catalog__wrap">
-							<input class="main-catalog__label-input visually-hidden" id="wifi" name="wifi" type="checkbox">
-							<label class="main-catalog__label-checkbox" for="wifi">Wi-Fi</label>
-						</p>
+					<p class="main-catalog__wrap">
+						<input class="main-catalog__label-input visually-hidden" id="wifi" name="wifi" type="checkbox">
+						<label class="main-catalog__label-checkbox" for="wifi">Wi-Fi</label>
+					</p>
 				</fieldset>
 
 				<fieldset class="main-catalog__fieldset">
@@ -90,7 +88,7 @@
 				</fieldset>
 
 				<fieldset class="main-catalog__fieldset main-catalog__fieldset--wide range">
-					<legend class="main-catalog__legend">Стоимость, ₽:</legend>
+					<legend class="main-catalog__legend main-catalog__legend--alter">Стоимость, ₽:</legend>
 					<label class="range__label range__label--alter">
 						<input class="range__input" type="number" min="100" max="11000" step="100" name="start" placeholder="0">
 						<span class="range__text">от</span>
@@ -99,7 +97,8 @@
 						<input class="range__input" type="number" min="100" max="11000" step="100" name="end" placeholder="9000">
 						<span class="range__text">до</span>
 					</label>
-					<div class="range__label-area"></div>
+					<div class="range__target">
+					</div>
 				</fieldset>
 
 				<div class="button-inner">
@@ -117,7 +116,7 @@
 				</select>
 
 				<button class="main-catalog__order main-catalog__order--tile
-					main-catalog__order--current" type="button">
+															main-catalog__order--current" type="button">
 					<span class="visually-hidden">Отсортировать плиткой.</span>
 				</button>
 				<button class="main-catalog__order main-catalog__order--desktop" type="button">
@@ -185,7 +184,7 @@
 			<div class="pagination-area">
 				<ul class="pagination-list">
 					<li class="pagination-list__item">
-						<a class="pagination-list__link pagination-list__link--current" href="#">1</a>
+						<a class="pagination-list__link pagination-list__link--current" title="current">1</a>
 					</li>
 					<li class="pagination-list__item">
 						<a class="pagination-list__link" href="#">2</a>
@@ -255,40 +254,8 @@
 			</footer>
 		</div>
 
+		<script src="//cdn.bootcss.com/noUiSlider/8.5.1/nouislider.js"></script>
 		<script src="scripts/main.js"></script>
 		
-
-		<script>
-		var range = document.querySelector('.range__label-area');
-		noUiSlider.create(range, {
-				start: [ 0, 9000 ], // Handle start position
-				step: 100, // Slider moves in increments of '10'
-				cssPrefix: 'range__',
-				margin: 20, // Handles must be more than '20' apart
-				connect: true, // Display a colored bar between the handles
-				direction: 'ltr', // Put '0' at the bottom of the slider
-				orientation: 'horizontal', // Orient the slider vertically
-				behaviour: 'tap-drag', // Move handle on tap, bar is draggable
-				range: { // Slider can select '0' to '100'
-						'min': 0,
-						'max': 11000
-				},
-		});
-		var valueInput = document.querySelector('.value-input'),
-						valueSpan = document.querySelector('.value-span');
-		// When the slider value changes, update the input and span
-		range.noUiSlider.on('update', function( values, handle ) {
-				if ( handle ) {
-						valueInput.value = values[handle];
-				} else {
-						valueSpan.innerHTML = values[handle];
-				}
-		});
-		// When the input changes, set the slider value
-		valueInput.addEventListener('change', function(){
-				range.noUiSlider.set([null, this.value]);
-		});
-</script>
-
 	</body>
 </html>
