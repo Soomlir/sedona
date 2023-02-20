@@ -19,20 +19,20 @@
 			<form class="main-catalog__form" method="post" action="echo.htmlacademy.ru">
 				<fieldset class="main-catalog__fieldset">
 					<legend class="main-catalog__legend">Инфраструктура:</legend>
-						<p class="main-catalog__wrap">
-							<input class="main-catalog__label-input visually-hidden" id="pool" name="pool" type="checkbox" checked>
-							<label class="main-catalog__label-checkbox" for="pool">Бассейн</label>
-						</p>
+					<p class="main-catalog__wrap">
+						<input class="main-catalog__label-input visually-hidden" id="pool" name="pool" type="checkbox" checked>
+						<label class="main-catalog__label-checkbox" for="pool">Бассейн</label>
+					</p>
 
-						<p class="main-catalog__wrap">
-							<input class="main-catalog__label-input visually-hidden" id="parking" name="parking" type="checkbox" checked>
-							<label class="main-catalog__label-checkbox" for="parking">Парковка</label>
-						</p>
+					<p class="main-catalog__wrap">
+						<input class="main-catalog__label-input visually-hidden" id="parking" name="parking" type="checkbox" checked>
+						<label class="main-catalog__label-checkbox" for="parking">Парковка</label>
+					</p>
 
-						<p class="main-catalog__wrap">
-							<input class="main-catalog__label-input visually-hidden" id="wifi" name="wifi" type="checkbox">
-							<label class="main-catalog__label-checkbox" for="wifi">Wi-Fi</label>
-						</p>
+					<p class="main-catalog__wrap">
+						<input class="main-catalog__label-input visually-hidden" id="wifi" name="wifi" type="checkbox">
+						<label class="main-catalog__label-checkbox" for="wifi">Wi-Fi</label>
+					</p>
 				</fieldset>
 
 				<fieldset class="main-catalog__fieldset">
@@ -52,18 +52,17 @@
 				</fieldset>
 
 				<fieldset class="main-catalog__fieldset main-catalog__fieldset--wide range">
-					<legend class="main-catalog__legend">Стоимость, ₽:</legend>
+					<legend class="main-catalog__legend main-catalog__legend--alter">Стоимость, ₽:</legend>
 					<label class="range__label range__label--alter">
-						<input class="range__input" type="number" min="100" max="11000" step="100"
-							name="start" placeholder="0">
+						<input class="range__input" type="number" min="100" max="11000" step="100" name="start" placeholder="0">
 						<span class="range__text">от</span>
 					</label>
 					<label class="range__label range__label--no-border">
-						<input class="range__input" type="number" min="100" max="11000" step="100"
-							name="end" placeholder="9000">
+						<input class="range__input" type="number" min="100" max="11000" step="100" name="end" placeholder="9000">
 						<span class="range__text">до</span>
 					</label>
-					<div class="range__label-area"></div>
+					<div class="range__target">
+					</div>
 				</fieldset>
 
 				<div class="button-inner">
@@ -81,7 +80,7 @@
 				</select>
 
 				<button class="main-catalog__order main-catalog__order--tile
-					main-catalog__order--current" type="button">
+															main-catalog__order--current" type="button">
 					<span class="visually-hidden">Отсортировать плиткой.</span>
 				</button>
 				<button class="main-catalog__order main-catalog__order--desktop" type="button">
@@ -149,7 +148,7 @@
 			<div class="pagination-area">
 				<ul class="pagination-list">
 					<li class="pagination-list__item">
-						<a class="pagination-list__link pagination-list__link--current" href="#">1</a>
+						<a class="pagination-list__link pagination-list__link--current" title="current">1</a>
 					</li>
 					<li class="pagination-list__item">
 						<a class="pagination-list__link" href="#">2</a>

@@ -1,4 +1,7 @@
 {
+	"globals": {
+    "noUiSlider": "readonly"
+  },
 	"env": {
 		"browser": true,
 		"es2017": true

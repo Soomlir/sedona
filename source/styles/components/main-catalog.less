@@ -120,6 +120,10 @@
 	text-transform: capitalize;
 }
 
+.main-catalog__legend--alter {
+	margin-bottom: 32px;
+}
+
 .main-catalog__info {
 	padding: 50px 70px 26px;
 }
@@ -132,7 +136,7 @@
 .main-catalog__lead {
 	width: 350px;
 	margin: 0;
-	margin-top: 9px;
+	margin-top: 7px;
 	margin-right: 188px;
 	font-weight: 700;
 	font-size: 30px;
@@ -158,6 +162,19 @@
 	border: 2px solid #e5e5e5;
 	border-radius: 4px;
 	appearance: none;
+
+	&:hover,
+	&:focus {
+		border: 2px solid #68a2ca;
+	}
+
+	&:active {
+		border: 2px solid #3f5e72;
+	}
+
+	&:disabled {
+		border: 2px solid rgba(0, 0, 0, 0.3);
+	}
 }
 
 .main-catalog__order {
