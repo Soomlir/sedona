@@ -45,6 +45,7 @@
 		top: 3px;
 		left: 2px;
 		display: flex;
+		box-sizing: border-box;
 		width: 20px;
 		height: 20px;
 		background: #ffffff;
@@ -63,13 +64,18 @@
 	background-image: url('../images/icons.svg#ok');
 }
 
-.main-catalog__label-input:hover ~ .main-catalog__label-checkbox::before,
+.main-catalog__label-input:hover ~ .main-catalog__label-checkbox,
+.main-catalog__label-input:hover ~ .main-catalog__label-checkbox::before {
+	opacity: 0.6;
+}
+
 .main-catalog__label-input:focus ~ .main-catalog__label-checkbox::before {
-	background: rgba(255, 255, 255, 0.6);
+	border: 3px solid #83b3d3;
+	border-radius: 4px;
 }
 
 .main-catalog__label-input:active ~ .main-catalog__label-checkbox::before {
-	background: rgba(255, 255, 255, 0.3);
+	opacity: 0.3;
 }
 
 .main-catalog__label-radio {
@@ -83,6 +89,7 @@
 	top: 2px;
 	left: 3px;
 	display: flex;
+	box-sizing: border-box;
 	width: 20px;
 	height: 20px;
 	background-color: #ffffff;
@@ -99,6 +106,20 @@
 	height: 10px;
 	background-color: #3f5e72;
 	border-radius: 50%;
+}
+
+.main-catalog__label-input:hover ~ .main-catalog__label-radio,
+.main-catalog__label-input:hover ~ .main-catalog__label-radio::before {
+	opacity: 0.6;
+}
+
+.main-catalog__label-input:focus ~ .main-catalog__label-radio::before {
+	border: 3px solid #83b3d3;
+	border-radius: 17px;
+}
+
+.main-catalog__label-input:active ~ .main-catalog__label-radio::before {
+	opacity: 0.3;
 }
 
 .main-catalog__heading {
@@ -161,6 +182,7 @@
 	background-size: 12px 8px;
 	border: 2px solid #e5e5e5;
 	border-radius: 4px;
+	outline: none;
 	appearance: none;
 
 	&:hover,
@@ -185,6 +207,7 @@
 	background: transparent;
 	border: 2px solid #e5e5e5;
 	border-radius: 4px;
+	outline: none;
 
 	&:hover {
 		border: 2px solid #000000;
