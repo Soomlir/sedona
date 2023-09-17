@@ -16,15 +16,13 @@
 				<nav class="page-header__nav main-nav">
 					<ul class="nav-list">
 						<li class="nav-list__item">
-							<a class="nav-list__link {{ isMain ? 'nav-list__link--current' }}"
-								{{ not isMain ? 'href="index.html" ' }}>Главная</a>
+							<a class="nav-list__link {{ isMain ? 'nav-list__link--current' }}" {{ not isMain ? 'href="index.html" ' }}>Главная</a>
 						</li>
 						<li class="nav-list__item">
 							<a class="nav-list__link" href="#!">О Седоне</a>
 						</li>
 						<li class="nav-list__item">
-							<a class="nav-list__link {{ not isMain ? 'nav-list__link--current' }}"
-								{{ not isCatalog ? 'href="catalog.html" ' }}>Гостиницы</a>
+							<a class="nav-list__link {{ not isMain ? 'nav-list__link--current' }}" {{ not isCatalog ? 'href="catalog.html" ' }}>Гостиницы</a>
 						</li>
 					</ul>
 
@@ -46,7 +44,8 @@
 			<footer class="page-footer page__footer">
 				<div class="page-footer__mailing {{ page == 'index' ? 'page-footer__mailing--alter' }}">
 					<b class="page-footer__lead">Подпишитесь на рассылку</b>
-					<p class="page-footer__text {{ page == 'index' ? 'page-footer__text--alter' }}">Только полезная информация и никакого спама,<br> честное бойскаутское!</p>
+					<p class="page-footer__text {{ page == 'index' ? 'page-footer__text--alter' }}">Только полезная информация и никакого спама,<br>
+						честное бойскаутское!</p>
 					<form class="page-footer__form" method="post">
 						<input class="page-footer__input" type="text" placeholder="Ваш e-mail">
 						<button class="page-footer__button button" type="submit">Подписаться</button>
@@ -77,12 +76,14 @@
 						<span class="visually-hidden">Разработано</span>
 						{# <img src="images/logo-htmlacademy.svg" alt="Логотип HTMLAcademy."> #}
 						<svg class="page-footer__img" role="img" aria-label="HTML Academy." width="115" height="33" focusable="false">
-							<use xlink:href="images/logo-htmlacademy.svg#logo" />
+							<use xlink:href="images/logo-htmlacademy.svg#logo"/>
 						</svg>
 					</a>
 				</div>
 			</footer>
 		</div>
+
+		{% block modal %}{% endblock %}
 
 		<script src="//cdn.bootcss.com/noUiSlider/8.5.1/nouislider.js"></script>
 		<script src="scripts/main.js"></script>
