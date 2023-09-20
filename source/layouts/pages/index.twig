@@ -85,36 +85,32 @@
 
 			<form class="search-form" action="http://echo.htmlacademy.ru" method="post">
 				<label class="search-form__label">
-					<span class="search-form__text search-form__text-indent">Дата Заезда:</span>
+					<span class="search-form__text search-form__text--indent">Дата Заезда:</span>
 					<input class="search-form__input" type="text" name="date-in" value="27 апреля 2020" pattern="^\d{1,2} ((января)|(февраля)|(марта)|(апреля)|(мая)|(июня)|(июля)|(августа)|(сентября)|(октября)|(ноября)|(декабря)) \d{4}$">
 				</label>
 				<p class="search-form__info search-form__info--accent">Мы не можем отправить вас в прошлое.</p>
 
 				<label class="search-form__label">
-					<span class="search-form__text search-form__text-indent">Дата Выезда:</span>
+					<span class="search-form__text search-form__text--indent">Дата Выезда:</span>
 					<input class="search-form__input" type="text" name="date-out" value="1 сентября 2021" pattern="^\d{1,2} ((января)|(февраля)|(марта)|(апреля)|(мая)|(июня)|(июля)|(августа)|(сентября)|(октября)|(ноября)|(декабря)) \d{4}$">
 				</label>
 				<p class="search-form__info search-form__info--variant">На эти даты есть свободные номера. Пока есть.</p>
 
 				<div class="search-form__counter-wrap">
 					<p class="search-form__inner">
-						<span>
-							<label class="search-form__text">Взрослые:</label>
-						</span>
+						<label class="search-form__text" for="adults">Взрослые:</label>
 						<span class="search-form__inner-btn">
 							<button class="search-form__counter search-form__counter-minus" type="button">
 								<span class="visually-hidden">Меньше.</span>
 							</button>
-							<input class="search-form__input-number" type="number" value="2" min="1" max="99">
+							<input class="search-form__input-number" id="adults" type="number" value="2" min="1" max="99">
 							<button class="search-form__counter search-form__counter-plus" type="button">
 								<span class="visually-hidden">Больше.</span>
 							</button>
 						</span>
 					</p>
 					<p class="search-form__inner">
-						<span>
-							<label class="search-form__label-indent search-form__text">Дети:</label>
-						</span>
+						<label class="search-form__label-indent search-form__text" for="children">Дети:</label>
 						<span class="search-form__tooltip">
 							<span class="search-form__content">
 								Укажите количество детей, которые будут с вами, возраст которых от 6 до 18 лет. Дети до 6 лет размещаются бесплатно.
@@ -124,7 +120,7 @@
 							<button class="search-form__counter" type="button">
 								<span class="visually-hidden">Меньше.</span>
 							</button>
-							<input class="search-form__input-number" type="number" value="2" min="0" max="99">
+							<input class="search-form__input-number" id="children" type="number" value="2" min="0" max="99">
 							<button class="search-form__counter search-form__counter-plus" type="button">
 								<span class="visually-hidden">Больше.</span>
 							</button>
