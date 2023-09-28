@@ -1,4 +1,4 @@
-const popupFunctional = () => {
+const initPopup = () => {
 	const popup = document.querySelector('.modal');
 	const link = document.querySelector('.search-block__link');
 	const closeButtonElement = popup.querySelector('.modal__close');
@@ -25,22 +25,4 @@ const popupFunctional = () => {
 	});
 };
 
-const stepUpDown = () => {
-	const downElements = document.querySelectorAll('.search-form__counter-minus');
-	const upElements = document.querySelectorAll('.search-form__counter-plus');
-	const inputElements = document.querySelectorAll('.search-form__input-number');
-
-	downElements.forEach((element, index) => {
-		element.addEventListener('click', () =>
-			index === 0 ? inputElements[0].stepDown() : inputElements[1].stepDown()
-		);
-	});
-
-	upElements.forEach((element, index) => {
-		element.addEventListener('click', () =>
-			index === 0 ? inputElements[0].stepUp() : inputElements[1].stepUp()
-		);
-	});
-};
-
-export { popupFunctional, stepUpDown };
+export { initPopup };
