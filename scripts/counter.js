@@ -1,0 +1,1 @@
+(()=>{var c=e=>{let n=e.querySelector(".search-form__counter-minus"),r=e.querySelector(".search-form__counter-plus"),t=e.querySelector(".search-form__input-number");n.addEventListener("click",()=>t.stepDown()),r.addEventListener("click",()=>t.stepUp())};})();
