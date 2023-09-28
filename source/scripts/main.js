@@ -1,11 +1,6 @@
-const handleAttributes = [
-	{
-		'aria-label': 'Меньше.'
-	},
-	{
-		'aria-label': 'Больше.'
-	}
-];
+import { popupFunctional, stepUpDown } from './popup.js';
+import { handleAttributes } from './range.js';
+
 
 const initRange = (containerElement = null) => {
 	if (!containerElement) {
@@ -29,7 +24,7 @@ const initRange = (containerElement = null) => {
 		handleAttributes,
 		range: { max, min },
 		start,
-		step,
+		step
 	});
 
 	rangeElement.noUiSlider.on('update', ([startValue, endValue]) => {
@@ -59,3 +54,5 @@ const initRange = (containerElement = null) => {
 };
 
 initRange(document.querySelector('.range'));
+popupFunctional();
+stepUpDown();
