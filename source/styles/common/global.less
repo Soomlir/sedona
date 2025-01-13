@@ -1,0 +1,31 @@
+body {
+	min-width: 1200px;
+	min-width: 320px;
+	margin: 0;
+	font-size: 22px;
+	line-height: 26px;
+	font-family: 'PT Sans', 'Arial', sans-serif;
+	background-color: #f2f2f2;
+}
+
+img {
+	display: block;
+	max-width: 100%;
+	height: auto;
+}
+
+a {
+	color: inherit;
+}
+
+:focus-visible {
+	outline: 2px solid;
+	outline-offset: 2px;
+}
+
+@supports not selector(:focus-visible) {
+	:focus {
+		outline: 2px solid;
+		outline-offset: 2px;
+	}
+}

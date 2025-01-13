@@ -1,0 +1,20 @@
+.visually-hidden {
+	position: fixed;
+	transform: scale(0);
+}
+
+.container {
+	width: 1200px;
+	margin-right: auto;
+	margin-left: auto;
+}
+
+.transition(@props: 'color, background-color') {
+	transition-property: ~'@{props}';
+	transition-duration: 0.3s;
+	transition-timing-function: ease-in-out;
+}
+
+.mask(@icon) {
+	mask: url('../images/icons.svg#@{icon}') no-repeat center / 100%;
+}

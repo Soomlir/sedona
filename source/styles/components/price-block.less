@@ -1,0 +1,181 @@
+.range {
+	display: flex;
+	flex-wrap: wrap;
+	align-items: flex-start;
+	box-sizing: border-box;
+	width: 296px;
+	margin-left: 81px;
+	padding: 0;
+}
+
+.range__label {
+	margin: 0;
+	padding: 8px 16px 10px;
+	color: #000000;
+	background: #f2f2f2;
+	border: 2px solid #ffffff;
+	border-radius: 4px 0 0 4px;
+}
+
+.range__label:focus {
+	border: 3px solid #83b3d3;
+	border-radius: 4px 0 0 4px;
+}
+
+.range__label:active {
+	border: 1px dashed #9747ff;
+	border-radius: 5px;
+}
+
+.range__label--alter {
+	margin-left: 3px;
+	border-right: none;
+	border-top-right-radius: 0;
+	border-bottom-right-radius: 0;
+}
+
+.range__label--no-border {
+	border-top-left-radius: 0;
+	border-bottom-left-radius: 0;
+}
+
+.range__text  {
+	margin-left: auto;
+	opacity: 0.3;
+}
+
+.range__input {
+	width: 84px;
+	font: inherit;
+	color: inherit;
+	background: transparent;
+	border: none;
+	border-radius: 4px;
+	outline: none;
+	box-shadow: none;
+	appearance: textfield;
+}
+
+.button-inner {
+	display: flex;
+	flex-direction: column;
+	margin-top: 58px;
+	margin-left: 20px;
+}
+
+.button-form {
+	margin-bottom: 31px;
+	padding: 8px 50px;
+	font-weight: 700;
+	font-size: 16px;
+	line-height: 20px;
+	text-transform: uppercase;
+	color: #ffffff;
+	background: #82b3d3;
+	border: none;
+
+	&:focus,
+	&:hover {
+		background: #68a2ca;
+	}
+
+	&:active {
+		color: rgba(255, 255, 255, 0.3);
+		background: #82b3d3;
+	}
+
+	&:disabled {
+		color: #ffffff;
+		background: #e5e5e5;
+	}
+}
+
+.button-form--alter {
+	text-transform: uppercase;
+	background: transparent;
+
+	&:hover,
+	&:focus {
+		background: none;
+		opacity: 0.6;
+	}
+
+	&:active {
+		background: none;
+	}
+}
+
+/* PRICE AREA */
+.range__target {
+	width: 100%;
+	padding-right: 20px;
+	-webkit-touch-callout: none;
+	-webkit-tap-highlight-color: transparent;
+}
+
+.range__base {
+	position: relative;
+	height: 20px;
+
+	&::before {
+		content: '';
+		position: absolute;
+		top: 8px;
+		right: -20px;
+		bottom: 8px;
+		left: 0;
+		background-color: currentColor;
+		opacity: 0.3;
+	}
+}
+
+.range__connect,
+.range__origin {
+	position: absolute;
+	width: 100%;
+	transform-origin: 0 0;
+	transform-style: flat;
+	transition: transform 0.2s ease-in-out;
+	will-change: transform;
+}
+
+.range__connect {
+	top: 8px;
+	right: 0;
+	height: 4px;
+	background-color: #ffffff;
+}
+
+.range__origin {
+	top: 0;
+	left: 100%;
+}
+
+.range__handle {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 20px;
+	height: 20px;
+	background-color: #ffffff;
+	border-radius: 5px;
+	cursor: pointer;
+
+	&:hover {
+		box-shadow: 0 4px 10px var(--color-base-25);
+	}
+
+	&:focus {
+		outline: var(--focus-outline);
+		box-shadow: 0 4px 10px var(--color-base-25);
+	}
+
+	&:active {
+		outline: 2px solid var(--color-cold-lite);
+		box-shadow: 0 7px 15px var(--color-base-40);
+	}
+}
+
+.range__touch-area {
+	height: 100%;
+}

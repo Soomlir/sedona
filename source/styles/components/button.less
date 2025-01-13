@@ -1,0 +1,31 @@
+.button {
+	.transition();
+
+	display: inline-block;
+	vertical-align: baseline;
+	box-sizing: border-box;
+	padding: 8px 34px;
+	font-family: inherit;
+	text-transform: uppercase;
+	text-decoration: none;
+	text-align: center;
+	color: #ffffff;
+	background-color: #756157;
+	border-radius: 4px;
+	cursor: pointer;
+
+	&:hover,
+	&:focus {
+		background: #615048;
+	}
+
+	&:active {
+		color: rgba(255, 255, 255, 0.3);
+		background: #756157;
+	}
+
+	&:disabled {
+		color: #ffffff;
+		background: #e5e5e5;
+	}
+}

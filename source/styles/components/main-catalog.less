@@ -1,0 +1,253 @@
+.main-catalog {
+	label {
+		font-size: 18px;
+		line-height: 21px;
+	}
+
+	fieldset {
+		border: none;
+	}
+}
+
+.main-catalog__inner {
+	background-image: url('../images/bg-filters.webp');
+}
+
+.main-catalog__form {
+	display: flex;
+	padding: 33px 40px 40px 66px;
+	color: #ffffff;
+}
+
+.main-catalog__fieldset {
+	margin: 0;
+	margin-right: 65px;
+	padding: 0;
+}
+
+.main-catalog__fieldset--wide {
+	margin-right: 47px;
+}
+
+.main-catalog__wrap {
+	margin: 0;
+	margin-bottom: 13px;
+	margin-left: 2px;
+}
+
+.main-catalog__label-checkbox {
+	position: relative;
+	padding-left: 38px;
+
+	&::before {
+		content: '';
+		position: absolute;
+		top: 3px;
+		left: 2px;
+		display: flex;
+		box-sizing: border-box;
+		width: 20px;
+		height: 20px;
+		background: #ffffff;
+		border-radius: 4px;
+	}
+}
+
+.main-catalog__label-input:checked ~ .main-catalog__label-checkbox::after {
+	content: '';
+	position: absolute;
+	top: 9px;
+	left: 6px;
+	display: block;
+	width: 13px;
+	height: 10px;
+	background-image: url('../images/icons.svg#ok');
+}
+
+.main-catalog__label-input:hover ~ .main-catalog__label-checkbox,
+.main-catalog__label-input:hover ~ .main-catalog__label-checkbox::before {
+	opacity: 0.6;
+}
+
+.main-catalog__label-input:focus ~ .main-catalog__label-checkbox::before {
+	border: 3px solid #83b3d3;
+	border-radius: 4px;
+}
+
+.main-catalog__label-input:active ~ .main-catalog__label-checkbox::before {
+	opacity: 0.3;
+}
+
+.main-catalog__label-radio {
+	position: relative;
+	padding-left: 38px;
+}
+
+.main-catalog__label-radio::before {
+	content: '';
+	position: absolute;
+	top: 2px;
+	left: 3px;
+	display: flex;
+	box-sizing: border-box;
+	width: 20px;
+	height: 20px;
+	background-color: #ffffff;
+	border-radius: 50%;
+}
+
+.main-catalog__label-input:checked ~ .main-catalog__label-radio::after {
+	content: '';
+	position: absolute;
+	top: 7px;
+	left: 8px;
+	display: block;
+	width: 10px;
+	height: 10px;
+	background-color: #3f5e72;
+	border-radius: 50%;
+}
+
+.main-catalog__label-input:hover ~ .main-catalog__label-radio,
+.main-catalog__label-input:hover ~ .main-catalog__label-radio::before {
+	opacity: 0.6;
+}
+
+.main-catalog__label-input:focus ~ .main-catalog__label-radio::before {
+	border: 3px solid #83b3d3;
+	border-radius: 17px;
+}
+
+.main-catalog__label-input:active ~ .main-catalog__label-radio::before {
+	opacity: 0.3;
+}
+
+.main-catalog__heading {
+	margin: 0;
+	padding-top: 34px;
+	padding-left: 70px;
+	font-weight: 700;
+	font-size: 60px;
+	line-height: 78px;
+	color: #ffffff;
+}
+
+.main-catalog__legend {
+	margin-bottom: 29px;
+	margin-left: 2px;
+	font-weight: 700;
+	font-size: 20px;
+	line-height: 26px;
+	text-transform: capitalize;
+}
+
+.main-catalog__legend--alter {
+	margin-bottom: 32px;
+}
+
+.main-catalog__info {
+	padding: 50px 70px 26px;
+}
+
+.main-catalog__container {
+	display: flex;
+	margin-bottom: 40px;
+}
+
+.main-catalog__lead {
+	width: 350px;
+	margin: 0;
+	margin-top: 7px;
+	margin-right: 188px;
+	font-weight: 700;
+	font-size: 30px;
+	line-height: 36px;
+	text-transform: uppercase;
+	color: #000000;
+}
+
+.main-catalog__select {
+	position: relative;
+	width: 292px;
+	height: 47px;
+	margin-right: 72px;
+	padding: 13px 18px;
+	font-size: 17px;
+	line-height: 21px;
+	color: #333333;
+	background-color: transparent;
+	background-image: url('../images/icons.svg#arrow-down');
+	background-repeat: no-repeat;
+	background-position: 94% 57%;
+	background-size: 12px 8px;
+	border: 2px solid #e5e5e5;
+	border-radius: 4px;
+	outline: none;
+	appearance: none;
+
+	&:hover,
+	&:focus {
+		border: 2px solid #68a2ca;
+	}
+
+	&:active {
+		border: 2px solid #3f5e72;
+	}
+
+	&:disabled {
+		border: 2px solid rgba(0, 0, 0, 0.3);
+	}
+}
+
+.main-catalog__order {
+	position: relative;
+	width: 48px;
+	height: 48px;
+	margin-right: 8px;
+	background: transparent;
+	border: 2px solid #e5e5e5;
+	border-radius: 4px;
+	outline: none;
+
+	&:hover {
+		border: 2px solid #000000;
+	}
+
+	&:focus {
+		border: 2px solid #68a2ca;
+	}
+
+	&:active {
+		border: 2px solid #000000;
+	}
+
+	&::before {
+		content: '';
+		position: absolute;
+		top: 15px;
+		left: 15px;
+		width: 16px;
+		height: 14px;
+		background-color: #000000;
+	}
+
+	&--tile::before {
+		mask-image: url('../images/icons.svg#icon-tile');
+	}
+
+	&--desktop::before {
+		mask-image: url('../images/icons.svg#icon-desktop');
+	}
+
+	&--list::before {
+		mask-image: url('../images/icons.svg#icon-list');
+	}
+}
+
+.main-catalog__order:last-child {
+	margin-right: 0;
+}
+
+.main-catalog__order--current {
+	border: 2px solid #000000;
+}

@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="ru">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>Sedona</title>
+		<link href="styles/main.css" rel="stylesheet">
+	</head>
+
+	<body>
+		<div class="page container">
+			<header class="page-header">
+				<a class="page-header__logo" {{ not isMain ? 'href="index.html" ' }}>
+					<img src="images/logo.svg" alt="Логотип сайта Sedona" width="139" height="70">
+				</a>
+				<nav class="page-header__nav main-nav">
+					<ul class="nav-list">
+						<li class="nav-list__item">
+							<a class="nav-list__link {{ isMain ? 'nav-list__link--current' }}" {{ not isMain ? 'href="index.html" ' }}>Главная</a>
+						</li>
+						<li class="nav-list__item">
+							<a class="nav-list__link" href="#!">О Седоне</a>
+						</li>
+						<li class="nav-list__item">
+							<a class="nav-list__link {{ not isMain ? 'nav-list__link--current' }}" {{ not isCatalog ? 'href="catalog.html" ' }}>Гостиницы</a>
+						</li>
+					</ul>
+
+					<div class="page-header__links">
+						<a class="page-header__search" href="#!">
+							<span class="visually-hidden">Поиск</span>
+						</a>
+						<a class="page-header__favorites" href="#!">
+							<span class="visually-hidden">Избранное</span>
+							<span class="page-header__count">12</span>
+						</a>
+						<a class="page-header__wish button" href="#!">Хочу сюда!</a>
+					</div>
+				</nav>
+			</header>
+
+			{% block main %}{% endblock %}
+
+			<footer class="page-footer page__footer">
+				<div class="page-footer__mailing {{ page == 'index' ? 'page-footer__mailing--alter' }}">
+					<b class="page-footer__lead">Подпишитесь на рассылку</b>
+					<p class="page-footer__text {{ page == 'index' ? 'page-footer__text--alter' }}">Только полезная информация и никакого спама,<br>
+						честное бойскаутское!</p>
+					<form class="page-footer__form" method="post">
+						<input class="page-footer__input" type="text" placeholder="Ваш e-mail">
+						<button class="page-footer__button button" type="submit">Подписаться</button>
+					</form>
+				</div>
+
+				<div class="contacts-inner">
+					<ul class="page-footer__social-list">
+						<li class="page-footer__social-item">
+							<a class="page-footer__social-link page-footer__social-link--vk" href="#!">
+								<span class="visually-hidden">Vk</span>
+							</a>
+						</li>
+						<li class="page-footer__social-item">
+							<a class="page-footer__social-link page-footer__social-link--telegram" href="#!">
+								<span class="visually-hidden">Telegram</span>
+							</a>
+						</li>
+						<li class="page-footer__social-item">
+							<a class="page-footer__social-link page-footer__social-link--youtube" href="#!">
+								<span class="visually-hidden">Youtube</span>
+							</a>
+						</li>
+					</ul>
+
+					<a class="page-footer__phone" href="tel:+78128121212">+7 (812) 812-12-12</a>
+					<a class="page-footer__copyright" href="#!">
+						<span class="visually-hidden">Разработано</span>
+						{# <img src="images/logo-htmlacademy.svg" alt="Логотип HTMLAcademy."> #}
+						<svg class="page-footer__img" role="img" aria-label="HTML Academy." width="115" height="33" focusable="false">
+							<use xlink:href="images/logo-htmlacademy.svg#logo"/>
+						</svg>
+					</a>
+				</div>
+			</footer>
+		</div>
+
+		{% block modal %}{% endblock %}
+
+		<script src="//cdn.bootcss.com/noUiSlider/15.7.0/nouislider.js"></script>
+		<script src="scripts/main.js" type="module"></script>
+		{% if devMode %}
+			<script src="scripts/dev.js"></script>
+		{% endif %}
+
+	</body>
+</html>

@@ -1,0 +1,137 @@
+.result-list {
+	display: flex;
+	flex-wrap: wrap;
+	margin: 0;
+	margin-bottom: 11px;
+	padding: 0;
+	padding-bottom: 22px;
+	list-style: none;
+	border-bottom: 1px solid #e6e6e6;
+}
+
+.result-list__item {
+	display: flex;
+	flex-wrap: wrap;
+	box-sizing: border-box;
+	width: 340px;
+	margin-right: 20px;
+	margin-bottom: 15px;
+	padding: 21px 19px 20px;
+	border: 1px solid #e6e6e6;
+}
+
+.result-list__item:nth-child(3) {
+	margin-right: 0;
+}
+
+.result-list__link {
+	text-decoration: none;
+}
+
+.result-list__heading {
+	margin: 0;
+	margin-top: 16px;
+	margin-bottom: 16px;
+	font-weight: 700;
+	font-size: 24px;
+	line-height: 28px;
+}
+
+.result-list__about {
+	margin: 0;
+	margin-right: 81px;
+	margin-bottom: 17px;
+	font-size: 18px;
+	line-height: 21px;
+	color: #333333;
+}
+
+.result-list__price {
+	margin: 0;
+	margin-bottom: 17px;
+	margin-left: 62px;
+	font-size: 18px;
+	line-height: 21px;
+	text-align: right;
+	color: #333333;
+}
+
+.result-list__more {
+	margin-right: 20px;
+	padding: 8px 26px;
+	font-weight: 700;
+	font-size: 16px;
+	line-height: 20px;
+}
+
+.result-list__favourite {
+	padding: 8px 20px;
+	font-weight: 700;
+	font-size: 16px;
+	line-height: 20px;
+	background-color: #82b3d3;
+
+	&:hover,
+	&:focus {
+		background: #68a2ca;
+	}
+
+	&:active {
+		color: rgba(255, 255, 255, 0.3);
+		background: #82b3d3;
+	}
+
+	&:disabled {
+		color: #ffffff;
+		background: #e5e5e5;
+	}
+}
+
+.result-list__favourite--in {
+	padding: 8px 18px;
+	background-color: #7db54f;
+
+	&:hover,
+	&:focus {
+		background: #6c9e42;
+	}
+
+	&:active {
+		color: rgba(255, 255, 255, 0.3);
+		background: #7db54f;
+	}
+
+	&:disabled {
+		color: #ffffff;
+		background: #e5e5e5;
+	}
+}
+
+.result-list__stars {
+	display: block;
+	width: 140px;
+	height: 37px;
+	margin-top: 17px;
+	margin-right: 17px;
+
+	&--two {
+		background-image: url('../images/icons.svg#stars-2');
+	}
+
+	&--three {
+		background-image: url('../images/icons.svg#stars-3');
+	}
+
+	&--four {
+		background-image: url('../images/icons.svg#stars-4');
+	}
+}
+
+.result-list__rating {
+	margin-top: 17px;
+	padding: 8px 23px;
+	font-size: 16px;
+	line-height: 20px;
+	color: #333333;
+	background-color: #f2f2f2;
+}

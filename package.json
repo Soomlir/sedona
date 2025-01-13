@@ -1,0 +1,53 @@
+{
+	"browserslist": [
+		"last 6 version",
+		"not dead",
+		"not IE 11"
+	],
+	"devDependencies": {
+		"autoprefixer": "10.4.12",
+		"browser-sync": "2.27.10",
+		"cross-env": "7.0.3",
+		"cssnano": "5.1.13",
+		"del": "7.0.0",
+		"eslint": "8.25.0",
+		"eslint-config-prettier": "8.5.0",
+		"eslint-plugin-markdown": "3.0.0",
+		"eslint-plugin-svelte3": "4.0.0",
+		"gulp": "4.0.2",
+		"gulp-data": "1.3.1",
+		"gulp-esbuild": "0.10.6",
+		"gulp-eslint": "6.0.0",
+		"gulp-html-bemlinter": "2.1.2",
+		"gulp-if": "3.0.0",
+		"gulp-less": "5.0.0",
+		"gulp-lintspaces": "1.0.1",
+		"gulp-postcss": "9.0.1",
+		"gulp-posthtml": "3.0.5",
+		"gulp-stacksvg": "1.0.4",
+		"gulp-svgmin": "4.1.0",
+		"gulp-twig": "1.2.0",
+		"gulp-webp": "4.0.1",
+		"htmlnano": "2.0.2",
+		"pineglade-pp": "^1.1.4",
+		"pineglade-w3c": "1.0.3",
+		"postcss-less": "6.0.0",
+		"postcss-reporter": "7.0.5",
+		"postcss-sort-media-queries": "4.3.0",
+		"pre-commit": "1.2.2",
+		"stylelint": "14.14.0",
+		"stylelint-config-prettier": "9.0.3",
+		"stylelint-order": "5.0.0",
+		"svgo": "2.8.0",
+		"terser": "5.15.1"
+	},
+	"name": "sedona",
+	"pre-commit": "lint",
+	"private": true,
+	"scripts": {
+		"build": "cross-env NODE_ENV=production gulp build",
+		"dev": "cross-env NODE_ENV=development gulp",
+		"lint": "cross-env LINT=1 NODE_ENV=production gulp lint"
+	},
+	"type": "module"
+}

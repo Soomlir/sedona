@@ -1,0 +1,48 @@
+.page-main {
+	position: relative;
+	background-image: url('../images/bg-index.webp');
+	background-repeat: no-repeat;
+}
+
+.page-main::before {
+	content: '';
+	position: absolute;
+	top: 428px;
+	left: 0;
+	display: block;
+	width: 1220px;
+	height: 57px;
+	background-image: url('../images/bg-border.webp');
+	background-repeat: no-repeat;
+}
+
+.page-main__lead {
+	width: 630px;
+	margin: 0 auto;
+	margin-bottom: 26px;
+	padding-top: 552px;
+	font-weight: 700;
+	font-size: 30px;
+	line-height: 36px;
+	text-transform: uppercase;
+	text-align: center;
+}
+
+.page-main__features {
+	margin: 0;
+	margin-bottom: 91px;
+	text-align: center;
+	color: #333333;
+}
+
+.page-main__img {
+	order: -1;
+}
+
+.page-main__item {
+	background-color: rgba(131, 179, 211, 0.2);
+
+	&:nth-child(2n) {
+		background-color: rgba(131, 179, 211, 0.12);
+	}
+}
