@@ -6,8 +6,8 @@
 * html
 * css
 * javascript
-* Less
-* Twig
-* Gulp
+* less
+* twig
+* gulp
 
 [Опубликованная версия](https://soomlir.github.io/sedona/)
