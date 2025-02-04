@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="ru">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>Sedona</title>
+		<link href="styles/main.css" rel="stylesheet">
+	</head>
+
+	<body>
+		<div class="page container">
+			<header class="page-header">
+				<a class="page-header__logo">
+					<img src="images/logo.svg" alt="Логотип сайта Sedona" width="139" height="70">
+				</a>
+				<nav class="page-header__nav main-nav">
+					<ul class="nav-list">
+						<li class="nav-list__item">
+							<a class="nav-list__link nav-list__link--current">Главная</a>
+						</li>
+						<li class="nav-list__item">
+							<a class="nav-list__link" href="#!">О Седоне</a>
+						</li>
+						<li class="nav-list__item">
+							<a class="nav-list__link " href="catalog.html">Гостиницы</a>
+						</li>
+					</ul>
+
+					<div class="page-header__links">
+						<a class="page-header__search" href="#!">
+							<span class="visually-hidden">Поиск</span>
+						</a>
+						<a class="page-header__favorites" href="#!">
+							<span class="visually-hidden">Избранное</span>
+							<span class="page-header__count">12</span>
+						</a>
+						<a class="page-header__wish button" href="#!">Хочу сюда!</a>
+					</div>
+				</nav>
+			</header>
+
+				<main class="page-main">
+		<h1 class="visually-hidden">Sedona</h1>
+		<p class="page-main__lead">Седона — небольшой городок в Аризоне, заслуживающий большего!</p>
+		<p class="page-main__features">Рассмотрим причины, по которым Седона круче, чем Гранд-Каньон!</p>
+		<ul class="main-list">
+			<li class="main-list__item">
+				<div class="main-list__wrapper">
+					<h2 class="main-list__heading">Настоящий городок</h2>
+					<span class="main-list__number"></span>
+					<p class="main-list__text">Седона — не аттракцион для туристов, там течёт своя жизнь</p>
+				</div>
+				<img class="main-list__img" src="images/bar.webp" alt="Кафе в Седоне" width="800" height="384">
+			</li>
+			<li class="page-main__item">
+				<h2 class="main-list__heading main-list__heading--alter">Небольшая площадь</h2>
+				<span class="main-list__number main-list__number--alter"></span>
+				<p class="main-list__text main-list__text--alter">Все достопримечательности находятся очень близко</p>
+			</li>
+			<li class="page-main__item">
+				<h2 class="main-list__heading main-list__heading--alter">Красивая<br>
+					дорога</h2>
+				<span class="main-list__number main-list__number--alter"></span>
+				<p class="main-list__text main-list__text--alter">Ехать в Седону из Лас-Вегаса совсем не скучно!</p>
+			</li>
+			<li class="page-main__item">
+				<h2 class="main-list__heading main-list__heading--alter">Мало<br>
+					туристов</h2>
+				<span class="main-list__number main-list__number--alter"></span>
+				<p class="main-list__text main-list__text--alter">Большинство едет в Гранд Каньон и толпится там</p>
+			</li>
+			<li class="main-list__item">
+				<div class="main-list__wrapper">
+					<h2 class="main-list__heading">Там есть<br>
+						мост дьявола</h2>
+					<span class="main-list__number"></span>
+					<p class="main-list__text">Да, по нему можно пройти! Если вы осмелитесь, разумеется</p>
+				</div>
+				<img class="main-list__img main-list__img--alter" src="images/canyon.webp" alt="Каньен в Седоне" width="800" height="384">
+			</li>
+			<li class="main-list__item">
+				<ul class="feature-list">
+					<li class="feature-list__item">
+						<h3 class="feature-list__heading feature-list__icon feature-list__icon--house">Жильё</h3>
+						<p class="feature-list__text">Рекомендуем пожить<br>
+							в настоящем мотеле,<br>
+							всё как в кино!</p>
+					</li>
+					<li class="feature-list__item">
+						<h3 class="feature-list__heading feature-list__icon feature-list__icon--burger">Еда</h3>
+						<p class="feature-list__text">Всегда заказывайте<br>
+							топовый фирменный бургер,<br>
+							вы не разочаруетесь!</p>
+					</li>
+					<li class="feature-list__item">
+						<h3 class="feature-list__heading feature-list__icon feature-list__icon--suprise">Сувениры</h3>
+						<p class="feature-list__text">Не только китайского,<br>
+							но и настоящего местного производства!</p>
+					</li>
+				</ul>
+			</li>
+		</ul>
+
+		<article class="page-main__search search-block">
+			<h2 class="visually-hidden">Поиск гостиницы.</h2>
+			<b class="search-block__lead">Заинтересовались?</b>
+			<p class="search-block__text">Укажите предполагаемые даты поездки,<br>
+				и мы покажем вам лучшие предложения гостиниц в Седоне</p>
+			<a class="search-block__link button" href="#!">Поиск гостиницы в Седоне</a>
+		</article>
+	</main>
+
+			<footer class="page-footer page__footer">
+				<div class="page-footer__mailing page-footer__mailing--alter">
+					<b class="page-footer__lead">Подпишитесь на рассылку</b>
+					<p class="page-footer__text page-footer__text--alter">Только полезная информация и никакого спама,<br>
+						честное бойскаутское!</p>
+					<form class="page-footer__form" method="post">
+						<input class="page-footer__input" type="text" placeholder="Ваш e-mail">
+						<button class="page-footer__button button" type="submit">Подписаться</button>
+					</form>
+				</div>
+
+				<div class="contacts-inner">
+					<ul class="page-footer__social-list">
+						<li class="page-footer__social-item">
+							<a class="page-footer__social-link page-footer__social-link--vk" href="#!">
+								<span class="visually-hidden">Vk</span>
+							</a>
+						</li>
+						<li class="page-footer__social-item">
+							<a class="page-footer__social-link page-footer__social-link--telegram" href="#!">
+								<span class="visually-hidden">Telegram</span>
+							</a>
+						</li>
+						<li class="page-footer__social-item">
+							<a class="page-footer__social-link page-footer__social-link--youtube" href="#!">
+								<span class="visually-hidden">Youtube</span>
+							</a>
+						</li>
+					</ul>
+
+					<a class="page-footer__phone" href="tel:+78128121212">+7 (812) 812-12-12</a>
+					<a class="page-footer__copyright" href="#!">
+						<span class="visually-hidden">Разработано</span>
+						
+						<svg class="page-footer__img" role="img" aria-label="HTML Academy." width="115" height="33" focusable="false">
+							<use xlink:href="images/logo-htmlacademy.svg#logo"></use>
+						</svg>
+					</a>
+				</div>
+			</footer>
+		</div>
+
+			<div class="modal">
+		<section class="modal__inner">
+			<h2 class="modal__heading">Поиск гостиницы в Седоне</h2>
+			<button type="button" class="modal__close">
+				<span class="visually-hidden">Закрыть</span>
+			</button>
+
+			<form class="search-form" action="http://echo.htmlacademy.ru" method="post">
+				<label class="search-form__label">
+					<span class="search-form__text search-form__text--indent">Дата Заезда:</span>
+					<input class="search-form__input" type="text" name="date-in" value="27 апреля 2020" pattern="^\d{1,2} ((января)|(февраля)|(марта)|(апреля)|(мая)|(июня)|(июля)|(августа)|(сентября)|(октября)|(ноября)|(декабря)) \d{4}$">
+				</label>
+				<p class="search-form__info search-form__info--accent">Мы не можем отправить вас в прошлое.</p>
+
+				<label class="search-form__label">
+					<span class="search-form__text search-form__text--indent">Дата Выезда:</span>
+					<input class="search-form__input" type="text" name="date-out" value="1 сентября 2021" pattern="^\d{1,2} ((января)|(февраля)|(марта)|(апреля)|(мая)|(июня)|(июля)|(августа)|(сентября)|(октября)|(ноября)|(декабря)) \d{4}$">
+				</label>
+				<p class="search-form__info search-form__info--variant">На эти даты есть свободные номера. Пока есть.</p>
+
+				<div class="search-form__counter-wrap">
+					<p class="search-form__inner">
+						<label class="search-form__text" for="adults">Взрослые:</label>
+						<span class="search-form__inner-btn" data-counter="">
+							<button class="search-form__counter search-form__counter-minus" type="button">
+								<span class="visually-hidden">Меньше.</span>
+							</button>
+							<input class="search-form__input-number" id="adults" type="number" value="2" min="1" max="99" step="1">
+							<button class="search-form__counter search-form__counter-plus" type="button">
+								<span class="visually-hidden">Больше.</span>
+							</button>
+						</span>
+					</p>
+					<p class="search-form__inner">
+						<label class="search-form__label-indent search-form__text" for="children">Дети:</label>
+						<span class="search-form__tooltip" tabindex="0">
+							<span class="search-form__content">
+								Укажите количество детей, которые будут с вами, возраст которых от 6 до 18 лет. Дети до 6 лет размещаются бесплатно.
+							</span>
+						</span>
+						<span class="search-form__inner-btn" data-counter="">
+							<button class="search-form__counter search-form__counter-minus" type="button">
+								<span class="visually-hidden">Меньше.</span>
+							</button>
+							<input class="search-form__input-number" id="children" type="number" value="2" min="0" max="99" step="1">
+							<button class="search-form__counter search-form__counter-plus" type="button">
+								<span class="visually-hidden">Больше.</span>
+							</button>
+						</span>
+					</p>
+				</div>
+
+				<button class="search-form__submit" type="submit">Найти</button>
+			</form>
+		</section>
+	</div>
+
+		<script src="//cdn.bootcss.com/noUiSlider/15.7.0/nouislider.js"></script>
+		<script src="scripts/main.js" type="module"></script>
+		
+	</body>
+</html>
