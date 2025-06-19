@@ -9,5 +9,3 @@
 * less
 * twig
 * gulp
-
-[Опубликованная версия](https://soomlir.github.io/sedona/)
